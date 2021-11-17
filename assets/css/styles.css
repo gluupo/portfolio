@@ -1,0 +1,145 @@
+:root {
+    --white: #f0e6ef;
+    --purple: #594773;
+    --pinkuu: #d48193;
+    --black: #0a0908;
+    --green: #b5bd89;
+    --darkpink: #321b31;
+    --medpink: #8c4f6f;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+h1 {
+    font-size: 55px;
+    padding: 12px 30px 20px 30px;
+    color: var(--white);
+}
+
+h2 {
+    font-size: 50px;
+    padding: 4px 4px;
+}
+
+header {
+    padding: 16px 16px 16px 0;
+    background-color: var(--pinkuu);
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+}
+
+nav ul {
+    margin-right: 25px;
+    list-style-type: none;
+}
+  
+nav ul li {
+    display: inline-block;
+    font-size: 20px;
+}
+  
+nav a {
+    text-decoration: none;
+    color: var(--white);
+    padding: 0 10px;
+    flex: 0 0 50px;
+    cursor: pointer;
+    align-items: center;
+}
+
+nav a:hover {
+    color: var(--purple);
+}
+
+aside {
+    border-right: solid 5px var(--purple);
+    width: 18%;
+    display: inline-block;
+    padding-right: 15px;
+    text-align: right;
+    margin: 20px 0;
+}
+
+section {
+    display: inline-block;
+    margin: 30px 0;
+    padding-left: 44px;
+    width: 74%;
+    flex-wrap: flex;
+}
+
+#about p {
+    line-height: 1.5rem;
+}
+
+#main-project {
+    flex: 1 0 auto;
+    width: 91%;
+    height: 400px;
+    object-fit: cover;
+    justify-content: space-between;
+    border: 4px solid var(--purple);
+    border-radius: 4px;
+    position: relative;
+}
+
+#main-project:hover {
+    border: 4px solid var(--pinkuu);
+}
+
+#main-project a::after {
+    content: attr(data-desc);
+    position: absolute;
+    transition: all 300ms ease-in;
+    display: inline-block;
+    width: 100px;
+    padding: 12px;
+    text-align: center;
+}
+img {
+    height: 300px;
+    width: 100%;
+    object-fit: cover;
+}
+
+section img {
+    flex: 1 0 auto;
+    width: 45%;
+    height: 200px;
+    object-fit: cover;
+    margin-bottom: 4px;
+    border: 4px solid var(--purple);
+    border-radius: 4px;
+}
+
+section img:hover {
+    border: 4px solid var(--pinkuu);
+}
+
+footer {
+    display: inline-block;
+    display: flex;
+    font-size: 20px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+footer a {
+    text-decoration: none;
+    padding: 12px 12px;
+    color: var(--pinkuu);
+}
+
+footer a:hover {
+    color: var(--purple);
+    text-decoration: underline;
+}
