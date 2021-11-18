@@ -199,8 +199,10 @@ footer a:hover {
         display: inline-block;
         text-align: left;
         width: 50%;
-        padding: 5px 20px;
+        margin-left: 45px;
+        padding: 0px 5px;
     }
+
     aside, footer aside {
         display: inline-block;
         /* text-align: center; */
@@ -236,5 +238,23 @@ footer a:hover {
     }
     main aside, footer aside {
         width: 100%;
+    }
+}
+@media screen and (max-width:499px) {
+    nav a {
+        margin-left: 30px;
+        align-items: unset;
+        display: column;
+        width: 50%;
+        padding: 4px 4px;
+    }
+}
+@media screen and (max-width:431px) {
+    nav a {
+        margin-left: 8px;
+        align-items: unset;
+        display: column;
+        width: 50%;
+        padding: 1px 1px;
     }
 }

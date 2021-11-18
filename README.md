@@ -13,4 +13,4 @@ also includes links with different types of ways to get in contact.
  reponsive to various screen sizes, tried to include as much accessibility as possible.
 
 ## visuals
-<img src="./assets/images/demo.png" alt="image of page" height="850px">
+<img src="./assets/images/demo.png" alt="image of page" height="650px">
