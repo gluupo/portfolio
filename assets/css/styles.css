@@ -8,6 +8,10 @@
     --medpink: #8c4f6f;
 }
 
+* {
+    box-sizing: border-box
+    }
+
 body {
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
@@ -23,6 +27,11 @@ h2 {
     padding: 4px 4px;
 }
 
+p {
+    line-height: 1.5rem;
+    padding: 20px 20px;
+}
+
 header {
     padding: 16px 16px 16px 0;
     background-color: var(--pinkuu);
@@ -31,6 +40,8 @@ header {
     align-items: center;
     justify-content: space-between;
 }
+
+/*navigation on page*/
 
 nav {
     display: flex;
@@ -54,10 +65,27 @@ nav a {
     flex: 0 0 50px;
     cursor: pointer;
     align-items: center;
+    display: inline-block;
 }
 
 nav a:hover {
     color: var(--purple);
+}
+
+/*starting of main content*/
+
+main, footer {
+    width: 90%;
+    display: flex;
+    flex-wrap: wrap;
+}
+    
+main aside, footer aside {
+    width: 25%
+}
+
+main section, main article, footer section {
+    width: 75%
 }
 
 aside {
@@ -66,64 +94,73 @@ aside {
     display: inline-block;
     padding-right: 15px;
     text-align: right;
-    margin: 20px 0;
+    margin: 33px 0;
 }
 
-section {
-    display: inline-block;
-    margin: 30px 0;
-    padding-left: 44px;
-    width: 74%;
+main article {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 20px 20px;
+}
+
+/*project links with images*/
+
+article a {
+    display: flex;
+    margin: 2px 2px;
+    width: 50%;
     flex-wrap: flex;
-}
-
-#about p {
-    line-height: 1.5rem;
-}
-
-#main-project {
-    flex: 1 0 auto;
-    width: 91%;
-    height: 400px;
-    object-fit: cover;
-    justify-content: space-between;
+    flex: 1 0 45%;
+    align-items: flex-start;
+    overflow: hidden;
     border: 4px solid var(--purple);
-    border-radius: 4px;
-    position: relative;
+    border-radius: 6px;
+    transition: all 300ms ease;
+    background-color: white;
+    height: 150px;
 }
 
-#main-project:hover {
-    border: 4px solid var(--pinkuu);
+article img {
+    transition: all 300ms ease;
 }
 
-#main-project a::after {
-    content: attr(data-desc);
-    position: absolute;
-    transition: all 300ms ease-in;
-    display: inline-block;
-    width: 100px;
-    padding: 12px;
-    text-align: center;
+article a:nth-child(1) {
+    width: 90%;
+    height: 160px;
+    flex: 1 0 90%;
 }
+
 img {
     height: 300px;
     width: 100%;
     object-fit: cover;
 }
 
+section p img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50px;
+    float: left;
+    margin-right: 22px;
+}
+
 section img {
     flex: 1 0 auto;
-    width: 45%;
     height: 200px;
-    object-fit: cover;
     margin-bottom: 4px;
-    border: 4px solid var(--purple);
     border-radius: 4px;
 }
 
-section img:hover {
+article a:hover {
     border: 4px solid var(--pinkuu);
 }
+
+article a:hover img {
+    transform: scale(1.1);
+    opacity: 0.25;
+}
+
+/*had to isolate footer tags to align with other content*/
 
 footer {
     display: inline-block;
@@ -135,11 +172,69 @@ footer {
 
 footer a {
     text-decoration: none;
-    padding: 12px 12px;
+    padding: 20px 20px;
     color: var(--pinkuu);
 }
 
 footer a:hover {
     color: var(--purple);
     text-decoration: underline;
+}
+
+/*media queries for different screen sizes*/
+
+@media screen and (max-width:768px) {
+    main, footer, .work {
+        flex-direction: column;
+        margin: 0 auto;
+    }
+    footer a {
+        display: inline-block;
+        text-align: left;
+        width: 50%;
+        padding: 5px 20px;
+        margin-left: 10px;
+    }
+    nav a {
+        display: inline-block;
+        text-align: left;
+        width: 50%;
+        padding: 5px 20px;
+    }
+    aside, footer aside {
+        display: inline-block;
+        /* text-align: center; */
+        /* width: 100%; */
+        padding: 0px 20px;
+        border-right: none;
+        margin-bottom: 0;
+    }
+    footer aside {
+        text-align: right;
+    }
+    aside section {
+        flex-wrap: wrap;
+    }
+    h1 {
+        display: inline-block;
+        text-align: center;
+    }
+    h2 {
+        font-size: 30px;
+    }
+    nav ul li {
+        display: inline-block;
+    }
+    main article, main section {
+        width: 100%;
+    }
+    footer section {
+        width: 100%;
+    }
+    footer {
+        align-items: unset;
+    }
+    main aside, footer aside {
+        width: 100%;
+    }
 }
