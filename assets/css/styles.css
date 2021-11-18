@@ -250,11 +250,22 @@ footer a:hover {
     }
 }
 @media screen and (max-width:431px) {
+    nav {
+        justify-content: space-around;
+        margin-left: 10px;
+    }
+    nav ul li {
+        display: inline-block;
+        flex-wrap: wrap;
+    }
     nav a {
-        margin-left: 8px;
         align-items: unset;
         display: column;
-        width: 50%;
-        padding: 1px 1px;
+        width: 100%;
+        padding: 1px 0px;
+        font-size: 15px;
+    }
+    header {
+        justify-content: space-around;
     }
 }
