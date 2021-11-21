@@ -2,7 +2,7 @@
     --white: #f0e6ef;
     --purple: #594773;
     --pinkuu: #d48193;
-    --black: #0a0908;
+    --black: #333;
     --green: #b5bd89;
     --darkpink: #321b31;
     --medpink: #8c4f6f;
@@ -25,11 +25,13 @@ h1 {
 h2 {
     font-size: 50px;
     padding: 4px 4px;
+    color: var(--black)
 }
 
 p {
     line-height: 1.5rem;
     padding: 20px 20px;
+    color: var(--black)
 }
 
 header {
