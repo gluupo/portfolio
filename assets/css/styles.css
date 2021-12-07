@@ -159,7 +159,32 @@ article a:hover {
 
 article a:hover img {
     transform: scale(1.1);
+    z-index: 0;
     opacity: 0.25;
+}
+
+.container a {
+    position:relative;
+}
+
+.container a::after {
+    content: attr(data-descr);
+    transition: all 500ms ease-in-out;
+    display: inline-block;
+    width: 200px;
+    position: absolute;
+    bottom: 20px;
+    left: 0px;
+    padding: 15px;
+    text-align: center;
+    color: var(--white);
+    background-color: var(--pinkuu);
+    border-radius: 0 .5rem .5rem 0;
+}
+
+.container a:hover::after {
+    transform: translateY(-20px) translateX(10px);
+    border-radius: .5rem;
 }
 
 /*had to isolate footer tags to align with other content*/
