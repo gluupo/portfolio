@@ -14,3 +14,6 @@ also includes links with different types of ways to get in contact.
 
 ## visuals
 <img src="./assets/images/demo.png" alt="image of page" height="650px">
+
+## link
+https://gluupo.github.io/portfolio/
