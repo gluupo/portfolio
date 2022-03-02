@@ -77,17 +77,21 @@ nav a:hover {
 /*starting of main content*/
 
 main, footer {
-    width: 90%;
+    width: 70%;
+    margin:0 auto;
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
 }
     
 main aside, footer aside {
-    width: 25%
+    width: 15%;
+    flex:0 0 auto;
 }
 
 main section, main article, footer section {
-    width: 75%
+    width: 85%;
+    flex: 0 0 auto;
 }
 
 aside {
@@ -159,7 +163,32 @@ article a:hover {
 
 article a:hover img {
     transform: scale(1.1);
+    z-index: 0;
     opacity: 0.25;
+}
+
+.container a {
+    position:relative;
+}
+
+.container a::after {
+    content: attr(data-descr);
+    transition: all 500ms ease-in-out;
+    display: inline-block;
+    width: 200px;
+    position: absolute;
+    bottom: 20px;
+    left: 0px;
+    padding: 15px;
+    text-align: center;
+    color: var(--white);
+    background-color: var(--pinkuu);
+    border-radius: 0 .5rem .5rem 0;
+}
+
+.container a:hover::after {
+    transform: translateY(-20px) translateX(10px);
+    border-radius: .5rem;
 }
 
 /*had to isolate footer tags to align with other content*/
@@ -185,7 +214,7 @@ footer a:hover {
 
 /*media queries for different screen sizes*/
 
-@media screen and (max-width:768px) {
+@media screen and (max-width:1700px) {
     main, footer, .work {
         flex-direction: column;
         margin: 0 auto;
